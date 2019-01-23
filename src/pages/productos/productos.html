@@ -1,0 +1,33 @@
+<!--
+  Generated template for the ProductosPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>Producto</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-card style="border-radius: 10px">
+    <ion-item>
+      <ion-col item-start>
+        <img [src] ="producto.imagen"> 
+      </ion-col>
+      <h2>{{producto.descripcion}}</h2> 
+      <h2>{{producto.precio}}</h2>
+      <h2>{{producto.ubi}}</h2>
+      <h2>Cuartos: {{producto.productos2.cuartos}}</h2>
+      <h2>Baños: {{producto.productos2.banos}}</h2>
+      <h2>Ára: {{producto.productos2.area}}</h2>
+      <ion-row>
+      </ion-row>
+    </ion-item>
+  </ion-card>
+  <button ion-button (click)="Agregar()">Comprar</button>
+</ion-content>

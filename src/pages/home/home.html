@@ -1,14 +1,26 @@
 <ion-header>
-  <ion-navbar>
+    <ion-toolbar>
     <ion-title>
-      Ionic Blank
+      Bienes raíces
     </ion-title>
-  </ion-navbar>
+      <ion-buttons end>
+        <button ion-button (click)="clickCarr()">
+        <ion-icon name="cart"></ion-icon>
+      </button>
+      </ion-buttons>
+      </ion-toolbar>
+    
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <ion-card style="border-radius: 10px" *ngFor="let p of productos" >
+    <ion-item >
+      <ion-col item-start>
+        <img [src] =p.imagen> 
+      </ion-col>
+      <h2 (click)="clickVer(p)">{{p.descripcion}}</h2>
+      <h2>{{p.precio}}</h2>
+      <h2>{{p.ubi}}</h2>
+    </ion-item>
+  </ion-card>
 </ion-content>
